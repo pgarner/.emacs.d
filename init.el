@@ -201,7 +201,8 @@
 ;(load "preview-latex.el" nil t t)
 (defun my-TeX-mode-hook ()
   (setq-default TeX-PDF-mode t)
-;  (setq-default TeX-view-program-selection (quote ((output-pdf "xdg-open"))))
+  (when *on_linux*
+    (setq-default TeX-view-program-selection (quote ((output-pdf "xdg-open")))))
   (local-set-key [f5] 'my-insert-latex-footer)
   (local-set-key [f6] 'my-insert-beamer-frame-1)
   (local-set-key [f7] 'my-insert-beamer-frame-2)
