@@ -62,3 +62,4 @@
   )
 (add-hook 'TeX-mode-hook 'my-TeX-mode-hook)
 
+(provide 'init-tex)
