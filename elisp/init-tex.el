@@ -2,13 +2,13 @@
 (require 'init-arch)
 (setq bibtex-field-delimiters 'double-quotes)
 
-;; My LaTeX footer
+;; My LaTeX footer (better to avoid this)
 (defun my-insert-latex-footer ()
   "Inserts footer for LaTeX source"
   (interactive)
   (insert "%%% Local Variables:\n")
   (insert "%%% mode: latex\n")
-  (insert "%%% TeX-master: t\n")
+  (insert "%%% TeX-master: "master"\n")
   (insert "%%% TeX-PDF-mode: t\n")
   (insert "%%% End:\n")
   )
@@ -53,6 +53,7 @@
 (load "auctex.el" nil t t)
 ;(load "preview-latex.el" nil t t)
 (defun my-TeX-mode-hook ()
+  (setq-default TeX-master "master") ; All master files called "master".
   (setq-default TeX-PDF-mode t)
   (when *on_linux*
     (setq-default TeX-view-program-selection (quote ((output-pdf "xdg-open")))))
