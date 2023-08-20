@@ -18,6 +18,7 @@
 
 ;; .h files tend to be C++ rather than C
 (setq auto-mode-alist (append '(("\\.h$" . c++-mode)) auto-mode-alist))
+(setq auto-mode-alist (append '(("\\.cu$" . c++-mode)) auto-mode-alist))
 
 ;; C and C++ mode hook
 ;(require 'google-c-style)
