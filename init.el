@@ -23,7 +23,7 @@
 (setq semanticdb-default-save-directory "~/.semanticdb")
 
 (require 'init-arch)
-(require 'init-frame)
+;(require 'init-frame)
 (require 'init-ruby)
 (require 'init-tex)
 (require 'init-c)
@@ -77,6 +77,7 @@
  '(font-use-system-font t)
  '(global-font-lock-mode t nil (font-lock))
  '(load-home-init-file t t)
+ '(package-selected-packages '(markdown-mode auctex))
  '(safe-local-variable-values '((TeX-master . tracter)))
  '(show-paren-mode t nil (paren))
  '(tool-bar-mode nil))
